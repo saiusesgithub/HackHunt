@@ -13,7 +13,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'HackHunt',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.greenAccent),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Color.fromARGB(255, 131, 254, 184),
+        ),
       ),
       home: Homescreen(),
     );
