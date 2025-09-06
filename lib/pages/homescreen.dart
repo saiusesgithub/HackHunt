@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:background/background.dart';
+import 'package:animated_transitions/animated_transitions.dart';
+import 'package:hackhunt/pages/hackathons_page.dart';
 
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
@@ -59,7 +61,14 @@ class _HomescreenState extends State<Homescreen> {
   Widget _searchHackathons() {
     return MaterialButton(
       minWidth: 250,
-      onPressed: () {},
+      onPressed: () {
+        Navigator.of(context).push(
+          TransitionPageRoute(
+            builder: (context) => HackathonsPage(),
+            transitionAnimation: CrtShutoffTransition(),
+          ),
+        );
+      },
       color: Color.fromARGB(255, 131, 254, 184),
       child: Text('Search For Hackathons'),
     );
